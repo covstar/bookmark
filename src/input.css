@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+
+html{
+    @apply font-Rubik
+}
+
+body{
+    @apply px-10% md:pt-5% overflow-x-hidden  sm:pt-[10%] relative
+}
+
+h2{
+    @apply md:text-[2.1rem] sm:text-[1.4rem] font-medium text-very_dark_blue
+}
+/* desktop nav */
+.desktop__nav{
+    @apply sm:hidden flex
+}
+.desktop__nav__links{
+    @apply ml-auto 
+}
+.desktop__nav__links ul{
+    @apply flex gap-x-10 my-auto
+}
+.desktop__nav__links ul li{
+    @apply  text-very_dark_blue hover:text-soft_red my-auto tracking-[.1rem]
+}
+.desktop__nav__links ul li button{
+    @apply  bg-soft_red text-white border-soft_red border-2 hover:bg-white hover:text-soft_red px-10 py-2 tracking-[.1rem] font-medium shadow-grayish_blue shadow-sm rounded
+}
+/* mobile nav  */
+.mobile__menu{
+    @apply md:hidden z-30 relative
+}
+.mobile__nav{
+    @apply md:hidden z-20 absolute text-white bg-very_dark_blue w-full h-screen -mx-[10%] -mt-[10%] bg-opacity-90 p-[10%] sm:hidden
+}
+/* mobile__nav__logo img */
+.mobile__inverted{
+    @apply invert grayscale contrast-200 brightness-[.7]
+}
+.mobile__nav__logo {
+    @apply absolute 
+}
+
+.icons{
+    @apply  top-1 right-0 absolute md:hidden cursor-pointer
+}
+.close__icon{
+    @apply hidden
+}
+.mobile__nav__links ul{
+    @apply text-center text-white mt-[20%]  w-full
+}
+.mobile__nav__links ul li{
+    @apply border-y-grayish_blue border-y py-4
+}
+.mobile__nav__links ul li:nth-child(2), .mobile__nav__links ul li:nth-child(4){
+    @apply border-none
+}
+.mobile__nav__links ul li button{
+    @apply mt-6 border-white w-full border-[3px] p-2 rounded
+}
+.mobile__nav__social__icon{
+    @apply absolute mx-auto bottom-10 left-0 right-0
+}
+.mobile__nav__social__icon ul{
+    @apply flex text-center justify-center gap-x-7 text-[1.5rem]
+}
+.mobile__nav__social__icon ul li{
+    @apply hover:text-soft_red
+}
+
+/* main section  */
+.hero__section{
+    @apply md:mt-7% md:flex gap-x-6 md:-mr-[13%] sm:mt-[30%] sm:-mr-[13%]
+}
+.hero__text{
+    @apply md:w-[40%] md:pr-14 md:my-auto sm:mt-[15%] sm:mr-[13%] sm:text-center
+}
+.hero__text h1{
+    @apply md:text-[3rem] sm:text-[1.6rem] font-[600] text-very_dark_blue leading-none mb-4 sm:leading-[1.5]
+}
+.hero__text p{
+    @apply md:text-[1.1rem] text-grayish_blue sm:text-[.9rem] sm:leading-[1.8] sm:mb-[10%]
+}
+.hero__buttons{
+    @apply md:mt-5% sm:flex gap-x-3
+}
+.hero__buttons button{
+    @apply px-6 py-3 text-[1.1rem] sm:text-[.7rem] border-2 font-medium rounded shadow-[0px_10px_15px_-10px] shadow-grayish_blue 
+}
+.hero__buttons button:nth-child(1){
+    @apply bg-soft_blue text-white hover:bg-white hover:text-soft_blue border-soft_blue
+}
+.hero__buttons button:nth-child(2){
+    @apply bg-grayish_blue bg-opacity-20 text-very_dark_blue md:ml-4  hover:bg-white hover:border-very_dark_blue
+}
+.hero__img__mobile{
+    @apply  relative overflow-hidden md:hidden w-full
+}
+.hero__img{
+    @apply md:w-[60%] relative overflow-hidden sm:hidden
+}
+.hero__img img{
+    @apply md:w-[90%] 
+}
+.img__background{
+    @apply bg-soft_blue w-[100%] h-[70%] absolute left-[32%] bottom-0 -z-10 rounded-bl-[150px]
+}
+
+/* FEATURES SECTION  */
+.feature__section{
+    @apply text-center  md:w-[50%] mx-auto md:mt-[8%] sm:mt-[10rem]
+}
+.feature__section p{
+    @apply text-[1.2rem] sm:text-[.9rem] text-grayish_blue mt-4
+}
+.tab__section{
+    @apply text-center md:w-[60%] mx-auto mt-[5%] sm:mt-[10%]
+}
+.tab__section ul{
+    @apply md:flex  gap-x-14 mb-[10%] md:border-b-[1px] md:border-b-grayish_blue justify-between text-grayish_blue
+}
+.active{
+    @apply text-very_dark_blue relative 
+}
+.active::before{
+    @apply content-[''] absolute top-0 sm:left-[25%] md:left-0 md:right-0 sm:right-[25%] bottom-0 border-b-[3.6px] border-b-soft_red
+}
+.tab__section ul li:nth-child(1){
+    @apply sm:border-t-[1px] 
+}
+.tab__section ul li{
+    @apply px-[1.5rem] md:pb-6 sm:py-[1rem] cursor-pointer hover:text-soft_red  sm:border-b-[1px] 
+}
+.tabs{
+    @apply md:flex mb-8 gap-x-16 sm:mt-[25%]
+}
+.tabs__img{
+    @apply relative md:w-[60%]
+}
+.tabs__img img{
+    @apply md:w-[100%] sm:w-[100%]
+}
+.tabs__img__backgound{
+    @apply bg-soft_blue w-[100%] sm:w-[250%] h-[90%] sm:h-[100%] absolute right-[32%] sm:right-[24%] -bottom-20 sm:-bottom-[19%] -z-10 rounded-br-[150px]
+}
+.tab__text{
+    @apply md:w-[50%] my-auto sm:mt-[25%] sm:text-center
+}
+.tab__text h2{
+    @apply md:mb-4
+}
+.tab__text p{
+    @apply md:text-[1.28rem] text-grayish_blue sm:text-[.9rem] sm:mt-3
+}
+.tab__text button{
+    @apply md:mt-8 bg-soft_blue px-4 py-2 rounded text-white shadow-grayish_blue shadow-md sm:hidden
+}
+
+
+/* DOWNLOAD SECTION  */
+.download__section{
+    @apply md:mt-[25%] sm:mt-[45%]
+}
+.download__heading{
+    @apply text-center
+}
+.download__heading p{
+    @apply md:pt-6 md:pb-[10%] md:w-[50%] md:text-[1.28rem] sm:text-[.9rem] text-grayish_blue mx-auto sm:mt-3 sm:mb-[10%]
+}
+.extensions{
+    @apply md:flex gap-x-8 justify-center
+}
+.extension__card{
+    @apply bg-white rounded-[10px] shadow-[0px_15px_19px_-10px_rgba(50,50,100,0.2444)]  pt-16 text-center pb-6 h-fit sm:mb-8
+}
+.extension__card h3{
+    @apply md:text-[1.4rem] font-medium text-very_dark_blue
+}
+.extension__card p{
+    @apply text-grayish_blue mb-8
+}
+.extension__logo img{
+    @apply mx-auto mb-6
+}
+.extension__card button{
+    @apply mt-4 bg-soft_blue border-soft_blue border-2 hover:bg-white hover:text-soft_blue px-7 py-3 text-white rounded-[5px]
+}
+.second__card{
+    @apply mt-[5%]
+}
+.third__third{
+    @apply mt-[10%]
+}
+
+/* FAQ section  */
+.accordian__section{
+    @apply md:mt-[15%] text-center sm:mt-[40%]
+}
+.accordian__section p{
+    @apply md:text-[1.28rem] my-4 md:w-[50%] text-grayish_blue mx-auto sm:text-[.9rem]
+}
+.accordian__menu{
+    @apply mx-auto mt-[5%] w-[50%] sm:w-[100%]
+}
+.faq{
+    @apply border-y py-6
+}
+.faq div{
+    @apply flex justify-between cursor-pointer
+}
+.faq h4{
+    @apply text-very_dark_blue text-[1.3rem] sm:text-[.9rem] font-normal hover:text-soft_red
+}
+.faq i{
+    @apply pr-4 text-[1.3rem] text-soft_blue sm:pr-0 hover:text-soft_red 
+}
+.faq p{
+    @apply text-[1.1rem] py-6 leading-[1.7] text-grayish_blue hidden sm:text-[.9rem]
+}
+.faq__button{
+    @apply text-center mt-[3%] sm:mt-[15%]
+}
+.faq__button button{
+    @apply md:mt-8 bg-soft_blue px-6 py-3 rounded text-white shadow-grayish_blue shadow-md
+}
+
+/* Newsletter section  */
+.newsletter__section{
+    @apply bg-soft_blue -mx-[13%] md:mt-[13%] sm:mt-[50%] text-white md:py-[8%] sm:py-[25%] text-center sm:px-[10%]
+}
+.newsletter__joined p{
+    @apply tracking-[5px] mb-[3%] sm:text-[.6rem]
+}
+.newsletter__joined h3{
+    @apply text-[2.5rem] sm:text-[1.3rem] w-[40%] sm:w-[100%] mx-auto font-medium leading-[1.2] mb-[3%]
+}
+.newsletter__form{
+    @apply  md:w-[50%] mx-auto sm:mt-[12%]  md:flex md:justify-center gap-x-6
+}
+.input{
+    @apply relative
+}
+.newsletter__form input{
+    @apply outline-0 w-[100%] sm:w-[100%] p-[1.1rem] sm:p-[.8rem] rounded-[10px]  mr-6  text-very_dark_blue border-soft_red
+}
+#email-error{
+    @apply absolute -bottom-8 left-0  text-white  py-2 text-left px-3 hidden text-[.9rem] w-[100%] sm:relative sm:-top-2 sm:left-0 sm:px-[12.7%]  sm:block
+}
+.newsletter__form button{
+    @apply bg-soft_red border-soft_red border-2 hover:text-soft_red hover:bg-white px-[2.5rem] py-[1.1rem] sm:p-[.8rem]  rounded-[10px] font-medium text-white shadow-md sm:w-[100%] sm:mt-[5%]
+}
+
+/* FOOTER SECTION  */
+footer{
+    @apply bg-very_dark_blue -mx-[13%] md:px-[10%] py-[2.5rem] sm:pb-4 sm:px-[2rem]
+}
+.footer__section{
+    @apply md:flex justify-between sm:text-center
+}
+.footer__logo{
+    @apply my-auto sm:mx-auto sm:w-[50%] sm:mb-[8%]
+}
+.footer__logo img{
+    @apply   hue-rotate-[165deg] invert w-[11rem]
+}
+.footer__left__wing{
+    @apply md:flex gap-x-[3.5rem]
+}
+.footer__left__wing ul{
+    @apply md:flex gap-x-[2.5rem] md:text-[1rem] sm:text-[.9rem] my-auto text-white uppercase tracking-[3px]
+}
+.footer__left__wing ul li{
+    @apply hover:text-soft_red sm:mb-[8%]
+}
+.social__links ul{
+    @apply flex text-white gap-x-8 text-[2rem] sm:justify-center sm:text-[1.5rem]
+}
+.social__links ul li{
+    @apply hover:text-soft_red
+}
+
+.attribution{
+    @apply text-center mt-[2rem] text-grayish_blue sm:text-[.8rem]
+}
+.attribution a{
+    @apply text-soft_red
+}
+@tailwind utilities;
