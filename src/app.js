@@ -77,7 +77,7 @@ $(document).ready(function(){
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             $('#email-input').css('border', '4px solid hsl(0, 94%, 66%)');
-            $('#email-error').show()
+            $('#email-error, .input > img').show()
             $('#email-error').css('backgroundColor', 'hsl(0, 94%, 66%)');
           $('#email-error').text('Whoops, make sure it\'s an email');
         } else {

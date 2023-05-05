@@ -244,16 +244,19 @@ h2{
     @apply  md:w-[50%] mx-auto sm:mt-[12%]  md:flex md:justify-center gap-x-6
 }
 .input{
-    @apply relative
+    @apply relative md:w-[50%]
+}
+.input img{
+    @apply absolute top-[30%] sm:top-[25%] right-2 hidden
 }
 .newsletter__form input{
-    @apply outline-0 w-[100%] sm:w-[100%] p-[1.1rem] sm:p-[.8rem] rounded-[10px]  mr-6  text-very_dark_blue border-soft_red
+    @apply outline-0 w-[100%] sm:w-[100%] p-[1.1rem] sm:p-[.8rem] rounded-[10px]  mr-6  text-very_dark_blue border-soft_red relative
 }
 #email-error{
     @apply absolute -bottom-8 left-0  text-white  py-2 text-left px-3 hidden text-[.9rem] w-[100%] sm:relative sm:-top-2 sm:left-0 sm:px-[12.7%]  sm:block
 }
 .newsletter__form button{
-    @apply bg-soft_red border-soft_red border-2 hover:text-soft_red hover:bg-white px-[2.5rem] py-[1.1rem] sm:p-[.8rem]  rounded-[10px] font-medium text-white shadow-md sm:w-[100%] sm:mt-[5%]
+    @apply bg-soft_red border-soft_red border-2 hover:text-soft_red hover:bg-white px-[2.5rem] py-[1.1rem] sm:p-[.8rem]  rounded-[10px] font-medium text-white shadow-md sm:w-[100%] sm:mt-[3%]
 }
 
 /* FOOTER SECTION  */

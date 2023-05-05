@@ -1577,7 +1577,27 @@ h2{
   position: relative;
 }
 
+@media (min-width: 722px){
+  .input{
+    width: 50%;
+  }
+}
+
+.input img{
+  position: absolute;
+  top: 30%;
+  right: 0.5rem;
+  display: none;
+}
+
+@media (max-width: 720px){
+  .input img{
+    top: 25%;
+  }
+}
+
 .newsletter__form input{
+  position: relative;
   margin-right: 1.5rem;
   width: 100%;
   border-radius: 10px;
@@ -1651,7 +1671,7 @@ h2{
 
 @media (max-width: 720px){
   .newsletter__form button{
-    margin-top: 5%;
+    margin-top: 3%;
     width: 100%;
     padding: .8rem;
   }
